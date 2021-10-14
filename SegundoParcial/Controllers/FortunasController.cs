@@ -79,7 +79,7 @@ namespace SegundoParcial.Controllers
         public async Task<ActionResult<Fortuna>> PostFortuna(Fortuna fortuna)
         {
             _context.Fortuna.Add(fortuna);
-            await _context.SaveChangesAsync();
+            _ = await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetFortuna", new { id = fortuna.SuerteId }, fortuna);
         }
